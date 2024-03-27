@@ -1,0 +1,79 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: #333;
+}
+
+.container {
+    width: 30%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    margin-top: 90px; 
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+}
+h2{
+    text-align: center;
+    color: black;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Form styles */
+form {
+    max-width: 400px; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:black;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+button {
+    display: block; /* Ensure the button behaves as a block element */
+    width: 100%; /* Set the width to fill the container */
+    padding: 10px; /* Add padding */
+    background-color: #007bff; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Apply border-radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+.container{
+    color:white ;
+}

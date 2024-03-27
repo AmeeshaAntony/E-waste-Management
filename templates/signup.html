@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+</head>
+<body>
+    <div class ="container">
+    <h2>Sign Up</h2>
+    <form method="post">
+        <label for="username">Username </label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password </label>
+        <input type="text" id="password" name="password" required>
+        <label for="contact_number">Contact Number:</label>
+        <input type="text" id="contact_number" name="contact_number" required>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea>
+        <label for="pincode">Pincode</label>
+        <input type="text" id="pincode" name="pincode" required>
+        <form method="post">
+        {% csrf_token %}
+            <button type="submit">Sign Up</button>
+        </form>
+    </form>
+</div>
+</body>
+</html>
