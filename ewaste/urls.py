@@ -22,5 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ewaste1.urls')),
     path('', include('home.urls')),
+    
     #path('signup/', include('signup.urls'))
 ]

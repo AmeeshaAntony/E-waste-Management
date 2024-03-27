@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color:white;
+    text-align: center;
+    width : 100%;
+    font-size: 50px;
+}
+
+p {
+    color: black;
+    padding-left: 20px;
+}
+
+.username {
+    font-weight: bold;
+    color: #007bff;
+}
+.percentage-poll-tab {
+    width: 480px; /* Set a specific width for the tab */
+    background-color: darkgray; /* Set background color for the tab */
+    padding: 10px; /* Add padding for better appearance */
+    overflow: hidden; /* Hide overflow content */
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis;
+    align-items: end;
+    max-height: 10px;
+}
+.overview-button,.productivity-button {
+    position: absolute;
+    display: block;
+    width: 150px;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    right: 800px;
+    padding: 10px 20px;
+}
+.productivity-button {
+    right: 550px;
+}
+.container{
+    
+    max-width: 500px;
+    min-height: 400px;
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.overview-container p {
+    color: blue; 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+.hi-text {
+    color: black; 
+    margin-top:100px ;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.hi-container {
+    display: none;
+    margin-top: 100px;
+    max-width: 500px;
+    min-height: 170px;
+    text-align:left;
+    justify-content: center; 
+    align-items: flex-end;
+    background-color: lightgray;
+    border-radius: 8px;
+    
+}

@@ -1,13 +1,37 @@
 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'styles3.css' %}">
 </head>
 <body>
-    <h1>Welcome to the Home Page!</h1>
-    
+    <div class ="container">
+    <h1>Home</h1>
+    {% if username %}
+        <h1>Hello, {{ username }}!</h1>
+    {% else %}
+        <h1>Hello, Guest!</h1>
+    {% endif %}
+    <a href="#" class="overview-button">Overview</a>
+
+    <a href="{% url 'productivity' %}" class="productivity-button">Productivity</a>
+    <div class="hi-container hidden">
+        <h2 class="hi-text">Daily Progress</h2>
+        <p class="p">Here you can see your daily tasks</p>
+        <p>75%</p>
+        <div class="percentage-poll-tab">
+            <p>percentage</p>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'custom.js' %}"></script>
+    <script>
+    var overviewUrl = "{{ overview_url }}";
+</script>
 </body>
 </html>
