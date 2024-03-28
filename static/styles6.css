@@ -1,0 +1,30 @@
+/* styles.css */
+
+/* Style for the main heading */
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Style for the paragraph */
+p {
+    text-align: justify;
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Style for the list */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Style for list items */
+li {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,90 @@
+
+h1 {
+    text-align: center; 
+    color: #333; 
+    font-size: 52px; 
+    margin-bottom: 20px; 
+}
+
+p {
+    text-align: center;
+    color: #666; 
+    font-size: 18px; 
+    margin-bottom: 20px; 
+}
+h2 {
+    text-align: center; 
+    color: #333; 
+    font-size: 34px; 
+    margin-bottom: 20px; 
+}
+.parallel-containers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container3 {
+    text-align: center;
+    margin: 0 5px; /* Add margin between video containers */
+    border: 2px solid #ccc; /* Add border */
+    padding: 10px; /* Add padding */
+}
+.container {
+    text-align: center;
+    margin: 0 10px; /* Add horizontal margin */
+    border: 5px solid blue; /* Add border */
+    padding: 80px;  /* Add some horizontal margin */
+    border-radius: 8px;
+}
+.container2 {
+    text-align: center;
+    margin: 0 10px; /* Add horizontal margin */
+    border: 5px solid seagreen; /* Add border */
+    padding: 80px;  /* Add some horizontal margin */
+    border-radius: 8px;
+}
+
+/* Style for the button text */
+.btn-text {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff; /* Change to your desired button color */
+    color: #fff; /* Change to your desired text color */
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style for the button text on hover */
+.btn-text:hover {
+    background-color: #0056b3; /* Change to your desired hover color */
+}
+
+.container img {
+    width: 30px; /* Set the width of the icons */
+    height: 30px; /* Set the height of the icons */
+}
+
+
+/* Style for the video containers */
+.container1 {
+    text-align: center; /* Align the text to the center */
+    margin-bottom: 20px; /* Add some bottom margin */
+    border: 5px solid blue;
+    border-radius: 8px;
+    padding:10px;
+}
+
+/* Style for the videos */
+.video-container {
+    display: inline-block; /* Use inline-block layout */
+    margin: 0 10px; /* Add some horizontal margin */
+}
+
+/* Additional styles can be added as needed */
+.parallel-containers1 {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Align items to the center horizontally */
+    margin-bottom: 20px; /* Add some bottom margin */
+    padding: 20px;
+}

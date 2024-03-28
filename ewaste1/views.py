@@ -31,4 +31,20 @@ def signup(request):
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
 
+def login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        
+        # Check if the user with the provided username and password exists
+        user = User.objects.filter(username=username, password=password).first()
+        if user:
+            # User exists, redirect to the home page
+            return redirect('home')
+        else:
+            # User does not exist or invalid credentials, handle accordingly
+            return render(request, 'login2.html', {'error_message': 'Invalid username or password'})
+    
+    return render(request, 'login2.html')
+
 

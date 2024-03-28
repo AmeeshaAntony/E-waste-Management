@@ -10,8 +10,7 @@ body {
 .container {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
-    
+    padding: 20px;  
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -42,7 +41,7 @@ p {
     align-items: end;
     max-height: 10px;
 }
-.overview-button,.productivity-button {
+.overview-button,.about-button {
     position: absolute;
     display: block;
     width: 150px;
@@ -55,7 +54,7 @@ p {
     right: 800px;
     padding: 10px 20px;
 }
-.productivity-button {
+.about-button {
     right: 550px;
 }
 .container{
@@ -85,9 +84,48 @@ p {
     max-width: 500px;
     min-height: 170px;
     text-align:left;
+    /*display: block;*/
     justify-content: center; 
     align-items: flex-end;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 8px;
     
 }
+.hidden-container1{
+    display: none;
+    background-color: yellow;
+    min-height: 160px;
+    border-radius: 8px;  
+    align-items: left;  
+}
+
+.c{
+    color:white;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.parallel-container {
+    display: flex; /* Use flexbox layout */
+    padding: 10px;
+}
+
+/* Style inner containers */
+.inner-container1, .inner-container2{
+    flex: 1; /* Equal width for both inner containers */
+    border: 1px solid black; /* Add borders for visualization */
+    padding: 10px; /* Add padding for spacing */
+    margin-right: 10px; /* Add margin between inner containers */
+    min-height: 60px;
+    border-radius: 8px;
+    color:white;
+    background-color: darkgray;
+}
+.con{
+    color:white;
+    text-align: left;
+}
+
+
+

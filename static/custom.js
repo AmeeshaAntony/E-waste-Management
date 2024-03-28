@@ -6,6 +6,6 @@ $(document).ready(function() {
         e.preventDefault(); // Prevent default link behavior
 
         // Show the hi-container
-        $('.hi-container').show();
+        $('.hi-container , .hidden-container1').show();
     });
 });
