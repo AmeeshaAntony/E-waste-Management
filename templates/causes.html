@@ -1,22 +1,80 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Causes of E-Waste</title>
+    <title>Causes Page</title>
     <link rel="stylesheet" href="{% static 'styles6.css' %}">
+    <style>
+        /* Style for the main heading */
+        h1 {
+            text-align: center;
+            color: whitesmoke;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the paragraph */
+        p {
+            text-align: justify;
+            color: whitesmoke;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the list */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Style for list items */
+        li {
+            color: whitesmoke;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .container {
+           max-width: 700px; /* Adjust the maximum width as needed */
+            margin: 10px auto; /* Center the container horizontally */
+            padding: 20px; /* Add some padding around the container */
+            background-color: black; /* Background color for the container */
+            border-radius: 20px; /* Add rounded corners to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the container */
+            display: flex; /* Use Flexbox */
+            flex-direction: column; /* Stack flex items vertically */
+            justify-content: start; /* Center the container vertically */
+            height: 90vh; /* Set container height to 100% of viewport height */
+            margin-top: 0;/* Set container height to 100% of viewport height */
+        }
+        body{
+            padding: 20px;
+            background-image: url('{% static "images/causebg.jpeg" %}'); /* Add background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Arial, sans-serif; /* Specify a fallback font */
+            color: #333;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Causes of E-Waste</h1>
-        <p>E-waste is generated due to various reasons. Here are some common causes:</p>
-        <ul>
-            <li>Rapid technological advancements leading to frequent upgrades</li>
-            <li>Short product life cycles and built-in obsolescence</li>
-            <li>Increased consumerism and demand for electronic devices</li>
-            <li>Lack of awareness about proper e-waste disposal methods</li>
-            <li>Improper recycling practices and illegal dumping</li>
-        </ul>
-    </div>
+    <h1>Causes of E-Waste</h1>
+    <p>E-waste is generated due to various reasons. Here are some common causes:</p>
+    <ul>
+        <li>Rapid technological advancements leading to frequent upgrades : The constant evolution of technology leads to shorter product lifecycles and frequent upgrades.</li>
+        <li>Consumerism and Planned Obsolescence: The culture of consumerism encourages people to frequently replace their electronic devices in pursuit of the latest features and trends.</li>
+        <li>Increased Affordability and Accessibility: The decreasing costs of electronic devices, coupled with their widespread availability, have made them more accessible to consumers worldwide.</li>
+        <li>Disposal Practices: Improper disposal practices, such as landfilling and incineration, significantly contribute to e-waste accumulation.</li>
+        <li>Built-in Non-Replaceable Batteries: Many modern electronic devices, such as smartphones and tablets, are designed with non-replaceable batteries.</li>
+        <li>Improper recycling practices and illegal dumping : Inadequate infrastructure for e-waste collection, recycling, and processing is a major contributing factor to the accumulation of electronic waste.</li>
+        <li>Business and Institutional E-Waste: Commercial and institutional sectors, including businesses, educational institutions, and government agencies, also generate significant amounts of e-waste through the disposal of outdated equipment and infrastructure upgrades.</li>
+    </ul>
+</div>
+
+
 </body>
 </html>

@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Style for the main heading */
 h1 {
     text-align: center;
     color: #333;
@@ -8,7 +6,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Style for the paragraph */
 p {
     text-align: justify;
     color: #666;
@@ -16,15 +13,36 @@ p {
     margin-bottom: 20px;
 }
 
-/* Style for the list */
 ul {
     list-style-type: disc;
     margin-left: 20px;
 }
 
-/* Style for list items */
 li {
     color: #666;
     font-size: 16px;
     margin-bottom: 10px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: auto; /* Center the container horizontally */
+    padding: 20px; /* Add some padding around the container */
+    background-color: #f5f5f5; /* Background color for the container */
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the container */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack flex items vertically */
+    justify-content: center; /* Center the container vertically */
+    height: 100vh; /* Set container height to 100% of viewport height */
 }
