@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'ewaste1',
     'signup',
     'home',
+    'product',
 ]
 
 MIDDLEWARE = [

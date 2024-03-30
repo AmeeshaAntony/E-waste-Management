@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
     height: 100vh;
+    background-color: black;
 }
 
 .container {
@@ -41,7 +41,7 @@ p {
     align-items: end;
     max-height: 10px;
 }
-.overview-button,.about-button {
+.overview-button,.about-button,.order-button,.product-button,.help-button {
     position: absolute;
     display: block;
     width: 150px;
@@ -51,16 +51,25 @@ p {
     text-align: center;
     text-decoration: none;
     border-radius: 15px;
-    right: 800px;
+    right: 1200px;
     padding: 10px 20px;
 }
 .about-button {
-    right: 550px;
+    right: 960px;
+}
+.product-button {
+    right: 720px;
+}
+.order-button {
+    right: 480px;
+}
+.help-button{
+    right: 240px;
 }
 .container{
     
     max-width: 500px;
-    min-height: 400px;
+    min-height: 200px;
     padding: 20px;
     
     border-radius: 8px;

@@ -21,6 +21,14 @@ def about(request):
 def causes(request):
     return render(request, 'causes.html')
 
+def effect(request):
+    return render(request, 'effect.html')
+
+def solutions(request):
+    return render(request, 'solutions.html')
+
+def product(request):
+    return render(request, 'product_list.html')
 
 
 

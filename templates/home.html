@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="{% static 'styles3.css' %}">
 </head>
 <body>
-
     <div class ="container">
     <h1>Home</h1>
     {% if username %}
@@ -17,9 +16,14 @@
     {% else %}
         <h1>Hello, Guest!</h1>
     {% endif %}
+    </div>
     <a href="#" class="overview-button">Overview</a>
 
     <a href="about.html" class="about-button">About</a>
+    <a href="product_list.html" class="product-button">Products</a>
+    <a href="order.html" class="order-button">Order</a>
+    <a href="help.html" class="help-button">Help</a>
+    <div class ="container">
     <div class="hi-container hidden">
         <h2 class="hi-text">Daily Progress</h2>
         <p class="p">Here you can see your daily tasks</p>
@@ -39,7 +43,7 @@
                 </div>
         </div>
     </div>
-
+</div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{% static 'custom.js' %}"></script>
