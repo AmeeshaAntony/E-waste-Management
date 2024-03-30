@@ -6,9 +6,17 @@
     <title>Product Detail</title>
 </head>
 <body>
-    <h1>{{ product.name }}</h1>
-    <p>Description: {{ product.description }}</p>
-    <p>Price: ${{ product.price }}</p>
-    <p>Stock: {{ product.stock }}</p>
+    <h1>Product List</h1>
+   <div class="product-list-container">
+    {% for product in Products %}
+        <a href="{% url 'product_detail' product.id %}" class="product-link">
+            <div class="product-item">
+                <h2 class="product-title">{{ product.title }}</h2>
+                <p class="product-description">{{ product.description }}</p>
+                <p class="product-price">${{ product.price }}</p>
+            </div>
+        </a>
+    {% endfor %}
+</div>
 </body>
 </html>
