@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="{% static 'styles7.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h1>Order Page</h1>
+    <p>This is the order page. You can add your order form or any other content related to placing an order here.</p>
+    <!-- Example order form -->
+    <form action="submit_order.html" method="POST">
+        <!-- Your order form fields go here -->
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" value="1" min="1">
+        <br>
+        <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode">
+        <br>
+        <label for="placeName" class="place-name-input">Place Name:</label>
+            <input type="text" id="placeName" name="placeName" placeholder="Enter place name" class="place-name-input">
+            <br>
+        <input type="submit" value="Place Order">
+    </form>
+    <a href="product_list.html" class="back-link">Back to Product List</a>
+    </div>
+    <script>
+        document.getElementById('pincode').addEventListener('blur', function() {
+            let pincode = this.value;
+            let placeName = lookupPlaceName(pincode); 
+            if (placeName) {
+                document.getElementById('placeName').value = placeName;
+            }
+        });
+        function lookupPlaceName(pincode) {
+            const pincodeData = {
+                '683511': 'Alangad',
+                '682012': 'Pachalam',
+                '683101': 'Aluva',
+                '683572': 'Angamally',
+                '683514': 'Cherai',
+                '682027': 'Chittor',
+                '682312': 'Kanayannor',
+                '682001': 'Kochi',
+                '682016': 'MG Road',
+                '682004': 'Naval Base',
+                '682027': 'Kothad',
+                '686691': 'Kothamangalam',
+                '683516': 'Maliankara',
+                '682511': 'Malipuram',
+                '683501': 'Manjummel',
+                '683513': 'Paravur',
+                '682036': 'Panampilly Nagar',
+                '683104': 'Rajagiri',
+
+            };
+            return pincodeData[pincode] || '';
+        }
+    </script>
+</body>
+</html>

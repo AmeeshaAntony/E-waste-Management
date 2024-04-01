@@ -12,12 +12,12 @@ body {
 }
 
 .container {
-    width: 30%; /* Adjust width as needed */
-    margin: 0 auto; /* Center the container */
+    width: 30%; 
+    margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 90px; 
 }
 
@@ -34,10 +34,9 @@ p {
     line-height: 1.5;
 }
 
-/* Form styles */
 form {
-    max-width: 400px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the form */
+    max-width: 400px; 
+    margin: 0 auto;
 }
 
 label {
@@ -60,19 +59,19 @@ textarea {
 
 
 button {
-    display: block; /* Ensure the button behaves as a block element */
-    width: 100%; /* Set the width to fill the container */
-    padding: 10px; /* Add padding */
-    background-color: #007bff; /* Set background color */
-    color: #fff; /* Set text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Apply border-radius for rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    display: block; 
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
 input[type="submit"]:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+    background-color: #0056b3;
 }
 .container{
     color:white ;

@@ -30,5 +30,12 @@ def solutions(request):
 def product(request):
     return render(request, 'product_list.html')
 
+def help(request):
+    return render(request, 'help.html')
 
+def product_detail(request):
+    return render(request, 'product_detail.html')
+
+def order(request):
+    return render(request, 'order.html')
 

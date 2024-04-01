@@ -32,11 +32,11 @@ p {
     color: #007bff;
 }
 .percentage-poll-tab {
-    width: 480px; /* Set a specific width for the tab */
-    background-color: darkgray; /* Set background color for the tab */
-    padding: 10px; /* Add padding for better appearance */
-    overflow: hidden; /* Hide overflow content */
-    white-space: nowrap; /* Prevent text from wrapping */
+    width: 480px; 
+    background-color: darkgray; 
+    padding: 10px; 
+    overflow: hidden; 
+    white-space: nowrap; 
     text-overflow: ellipsis;
     align-items: end;
     max-height: 10px;
@@ -116,16 +116,15 @@ p {
 }
 
 .parallel-container {
-    display: flex; /* Use flexbox layout */
+    display: flex;
     padding: 10px;
 }
 
-/* Style inner containers */
 .inner-container1, .inner-container2{
-    flex: 1; /* Equal width for both inner containers */
-    border: 1px solid black; /* Add borders for visualization */
-    padding: 10px; /* Add padding for spacing */
-    margin-right: 10px; /* Add margin between inner containers */
+    flex: 1; 
+    border: 1px solid black; 
+    padding: 10px;
+    margin-right: 10px; 
     min-height: 60px;
     border-radius: 8px;
     color:white;

@@ -26,22 +26,22 @@ h2 {
 
 .container3 {
     text-align: center;
-    margin: 0 5px; /* Add margin between video containers */
-    border: 2px solid #ccc; /* Add border */
-    padding: 10px; /* Add padding */
+    margin: 0 5px;
+    border: 2px solid #ccc;
+    padding: 10px;
 }
 .container {
     text-align: center;
-    margin: 0 10px; /* Add horizontal margin */
-    border: 5px solid blue; /* Add border */
-    padding: 80px;  /* Add some horizontal margin */
+    margin: 0 10px;
+    border: 5px solid blue;
+    padding: 80px;
     border-radius: 8px;
 }
 .container2 {
     text-align: center;
-    margin: 0 10px; /* Add horizontal margin */
-    border: 5px solid seagreen; /* Add border */
-    padding: 80px;  /* Add some horizontal margin */
+    margin: 0 10px;
+    border: 5px solid seagreen; 
+    padding: 80px; 
     border-radius: 8px;
 }
 
@@ -49,42 +49,40 @@ h2 {
 .btn-text {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #007bff; /* Change to your desired button color */
-    color: #fff; /* Change to your desired text color */
+    background-color: #007bff; 
+    color: #fff; 
     border-radius: 5px;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
-/* Style for the button text on hover */
+
 .btn-text:hover {
-    background-color: #0056b3; /* Change to your desired hover color */
+    background-color: #0056b3; 
 }
 
 .container img {
-    width: 30px; /* Set the width of the icons */
-    height: 30px; /* Set the height of the icons */
+    width: 30px;
+    height: 30px; 
 }
 
 
-/* Style for the video containers */
+
 .container1 {
-    text-align: center; /* Align the text to the center */
-    margin-bottom: 20px; /* Add some bottom margin */
+    text-align: center; 
+    margin-bottom: 20px;
     border: 5px solid blue;
     border-radius: 8px;
     padding:10px;
 }
 
-/* Style for the videos */
 .video-container {
-    display: inline-block; /* Use inline-block layout */
-    margin: 0 10px; /* Add some horizontal margin */
+    display: inline-block;
+    margin: 0 10px;
 }
 
-/* Additional styles can be added as needed */
 .parallel-containers1 {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-around; /* Align items to the center horizontally */
-    margin-bottom: 20px; /* Add some bottom margin */
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
     padding: 20px;
 }

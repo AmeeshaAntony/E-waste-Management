@@ -11,4 +11,7 @@ urlpatterns = [
     path('home/effect.html', views.effect, name='effect'),
     path('home/solutions.html', views.solutions, name='solutions'),
     path('home/product_list.html', views.product, name='product'),
+    path('home/help.html', views.help, name='help'),
+    path('home/product_details.html', views.product_detail, name='product_detail'),
+    path('home/order.html', views.order, name='order'),
 ]
