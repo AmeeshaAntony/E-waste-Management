@@ -13,7 +13,7 @@ def login_view(request):
             login(request, user)
             return redirect('home')  # Redirect to home page after login
         else:
-            return render(request,'login.html', {'error_message': 'Invalid username or password'})
+            return render(request,'home.html', {'error_message': 'Invalid username or password'})
     else:
         return render(request,'login.html')
 
@@ -26,7 +26,9 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('login')  # Redirect to login page after successful signup
+            return redirect('login')
+        else:
+            return render(request, 'home.html', {'error_message': 'Invalid username or password'})
     else:
         form = UserCreationForm()
     return render(request, 'signup.html', {'form': form})
@@ -47,4 +49,5 @@ def login(request):
     
     return render(request, 'login2.html')
 
-
+def logined(request):
+    return render(request, 'home.html')

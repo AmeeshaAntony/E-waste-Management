@@ -1,5 +1,6 @@
 from django.db import models
-from products.models import Product  # Assuming you have a Product model in a 'products' app
+from product.models import Product 
+from django.contrib.auth.models import User
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

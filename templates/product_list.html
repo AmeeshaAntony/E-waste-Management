@@ -565,6 +565,9 @@ form a{
             <h2>House Equipments</h2>
         <div class="row">
             <div class="col-4">
+                <form action="cart.html" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="product_id" value="{{ cart_items.first.product.id }}">
                 <a href="product_details.html"><img src="{% static 'images/product-1.jpg' %}"></a>
                         <h4>Electric Toy</h4>
                             <div class="rating">
@@ -575,7 +578,8 @@ form a{
                                 <i class="fa fa-star-o"></i>
                             </div>
                         <p>$50.00</p>
-                        <a href="order.html" class="btn">Add To Cart</a>
+                        <button type="submit" class="btn">Add To Cart</button>
+                </form>
             </div>
             <div class="col-4">
                 <a href="product_details.html"><img src="{% static 'images/product-2.jpeg' %}"></a>

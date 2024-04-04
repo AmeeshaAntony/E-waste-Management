@@ -1,7 +1,9 @@
-
+from django.shortcuts import get_object_or_404
 
 from django.shortcuts import render
 from django.urls import reverse_lazy
+from .models import Cart,Product
+
 
 def home(request):
     username = None
@@ -39,3 +41,28 @@ def product_detail(request):
 def order(request):
     return render(request, 'order.html')
 
+def submit(request):
+    return render(request, 'submit.html')
+
+def cart(request):
+    if request.method == 'POST':
+        product_id = request.POST.get('product_id')
+        try:
+            product_id = int(product_id)
+            print(product_id)
+        except ValueError:
+            return render(request, 'order.html', {'message': 'Invalid product ID'})
+        
+        try:
+            product = get_object_or_404(Product, pk=product_id)
+        except Product.DoesNotExist:
+            return render(request, 'home.html', {'message': 'Product does not exist'})
+
+        # Continue with your view logic
+        # ...
+    else:
+        cart_obj = Cart.objects.all()  # Retrieve cart items from the database
+    
+    context = {'cart': cart_obj}
+    
+    return render(request, 'cart.html', context)
