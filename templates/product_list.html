@@ -565,9 +565,9 @@ form a{
             <h2>House Equipments</h2>
         <div class="row">
             <div class="col-4">
-                <form action="cart.html" method="post">
+                <!--<form action="cart.html" method="POST" enctype="multipart/form-data">
                     {% csrf_token %}
-                    <input type="hidden" name="product_id" value="{{ cart_items.first.product.id }}">
+                    <input type="hidden" name="product_id" value="{{ product_id }}">-->
                 <a href="product_details.html"><img src="{% static 'images/product-1.jpg' %}"></a>
                         <h4>Electric Toy</h4>
                             <div class="rating">
@@ -578,7 +578,7 @@ form a{
                                 <i class="fa fa-star-o"></i>
                             </div>
                         <p>$50.00</p>
-                        <button type="submit" class="btn">Add To Cart</button>
+                        <a href="classify.html" class="btn">Place Order</a>
                 </form>
             </div>
             <div class="col-4">
@@ -592,7 +592,7 @@ form a{
                                 <i class="fa fa-star-o"></i>
                             </div>
                         <p>$30.00</p>
-                        <a href="order.html" class="btn">Add To Cart</a>
+                        <a href="order.html" class="btn">Place Order</a>
             </div>
 
             <div class="col-4">
@@ -606,7 +606,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$30.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-4.jpeg' %}">
@@ -619,7 +619,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
     </div>
@@ -637,7 +637,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-6.jpeg' %}">
@@ -650,7 +650,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$2500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-7.jpeg' %}">
@@ -663,7 +663,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$2500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-8.jpeg' %}">
@@ -676,7 +676,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-9.jpeg' %}">
@@ -689,7 +689,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$250.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-10.jpeg' %}">
@@ -702,7 +702,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$300.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-11.webp' %}">
@@ -715,7 +715,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$700.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-12.jpeg' %}">
@@ -728,7 +728,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$300.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
     </div>
@@ -746,7 +746,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$12000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-14.jpeg' %}">
@@ -759,7 +759,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$5000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-15.jpeg' %}">
@@ -772,7 +772,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$5000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-16.jpeg' %}">
@@ -785,7 +785,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$100.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
         <div class="row">
@@ -800,7 +800,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$200.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-26.jpeg' %}">
@@ -813,7 +813,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-27.jpeg' %}">
@@ -826,7 +826,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-28.jpeg' %}">
@@ -839,7 +839,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
     </div>
@@ -857,7 +857,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$15000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-18.jpeg' %}">
@@ -870,7 +870,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$5000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-19.jpeg' %}">
@@ -883,7 +883,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-20.jpeg' %}">
@@ -896,7 +896,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$800.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
         <div class="row">
@@ -911,7 +911,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$15000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-22.jpeg' %}">
@@ -924,7 +924,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-23.jpeg' %}">
@@ -937,7 +937,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$10000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-24.jpeg' %}">
@@ -950,7 +950,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$800.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
     </div>
@@ -968,7 +968,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-30.jpeg' %}">
@@ -981,7 +981,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-31.jpeg' %}">
@@ -994,7 +994,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-32.jpeg' %}">
@@ -1007,7 +1007,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$1500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
     </div>
@@ -1025,7 +1025,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$10000.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-34.jpeg' %}">
@@ -1038,7 +1038,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-35.jpeg' %}">
@@ -1051,7 +1051,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$400.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
             <div class="col-4">
                 <img src="{% static 'images/product-36.jpeg' %}">
@@ -1064,7 +1064,7 @@ form a{
                     <i class="fa fa-star-o"></i>
                 </div>
                 <p>$500.00</p>
-                <a href="order.html" class="btn">Add To Cart</a>
+                <a href="order.html" class="btn">Place Order</a>
             </div>
         </div>
     </div>
@@ -1081,6 +1081,7 @@ form a{
                 MenuItems.style.maxHeight = "0px"
             }
         }
+    
     </script>
 
 </body>

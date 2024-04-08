@@ -1,5 +1,6 @@
 from django.shortcuts import get_object_or_404
-
+from django.shortcuts import render
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from .models import Cart,Product
@@ -44,25 +45,39 @@ def order(request):
 def submit(request):
     return render(request, 'submit.html')
 
+def classify(request):
+    return render(request, 'classify.html')
+
 def cart(request):
     if request.method == 'POST':
-        product_id = request.POST.get('product_id')
-        try:
-            product_id = int(product_id)
-            print(product_id)
-        except ValueError:
-            return render(request, 'order.html', {'message': 'Invalid product ID'})
-        
-        try:
-            product = get_object_or_404(Product, pk=product_id)
-        except Product.DoesNotExist:
-            return render(request, 'home.html', {'message': 'Product does not exist'})
-
-        # Continue with your view logic
-        # ...
+        product_id_str = request.POST.get('product_id')
+        if product_id_str:  # Check if 'product_id' is not empty
+            try:
+                product_id = int(product_id_str)
+                product = get_object_or_404(Product, pk=product_id)
+            # Further processing
+                return redirect('cart')  # Redirect to the cart page or any other appropriate page
+            except ValueError:
+            # Handle the case when 'product_id' is not a valid integer
+                return render(request, 'home.html', {'message': 'Invalid product ID'})
+        else:
+        # Handle the case when 'product_id' is not provided in the request
+            return render(request, 'about.html', {'message': 'Product ID is missing'})
     else:
-        cart_obj = Cart.objects.all()  # Retrieve cart items from the database
-    
-    context = {'cart': cart_obj}
-    
-    return render(request, 'cart.html', context)
+    # Handle other HTTP methods (e.g., GET)
+    # Render the cart page
+        return render(request, 'cart.html')
+
+def process_classification(request):
+    if request.method == 'POST':
+        classification = request.POST.get('classification')
+        if classification == 'plastic':
+            # Perform actions for plastic classification
+            return HttpResponse('E-Waste classified as plastic.')
+        elif classification == 'metal':
+            # Perform actions for metal classification
+            return HttpResponse('E-Waste classified as metal.')
+        else:
+            return HttpResponse('Invalid classification.')
+    else:
+        return HttpResponse('Method not allowed.')
