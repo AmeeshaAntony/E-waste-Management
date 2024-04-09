@@ -48,6 +48,9 @@ def submit(request):
 def classify(request):
     return render(request, 'classify.html')
 
+def query(request):
+    return render(request, 'query.html')
+
 def cart(request):
     if request.method == 'POST':
         product_id_str = request.POST.get('product_id')

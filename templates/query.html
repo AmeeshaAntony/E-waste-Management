@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Page</title>
+    <link rel="stylesheet" href="{% static 'styles6.css' %}">
+    <style>
+        /* Style for the main heading */
+        h1 {
+            text-align: center;
+            color: whitesmoke;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the paragraph */
+        p {
+            text-align: justify;
+            color: whitesmoke;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the list */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Style for list items */
+        li {
+            color: whitesmoke;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .container {
+            padding-top: 20px;
+            max-width: 700px; /* Adjust the maximum width as needed */
+            margin: 10px auto; /* Center the container horizontally */
+            padding: 20px; /* Add some padding around the container */
+            background-color: black; /* Background color for the container */
+            border-radius: 20px; /* Add rounded corners to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the container */
+            display: flex; /* Use Flexbox */
+            flex-direction: column; /* Stack flex items vertically */
+            justify-content: start; /* Center the container vertically */
+            height: 120vh; /* Set container height to 100% of viewport height */
+            margin-top: 0;/* Set container height to 100% of viewport height */
+        }
+        body{
+            padding: 20px;
+            background-image: url('{% static "images/causebg.jpeg" %}'); /* Add background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Arial, sans-serif; /* Specify a fallback font */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Classification of E-Waste</h1>
+    <p>Plastic E-waste</p>
+    <ul>
+        <li>Composition: Many electronic devices contain plastic components, which are often used for casing, housing, insulation, or structural support. Plastics used in electronics can include ABS (Acrylonitrile Butadiene Styrene), PVC (Polyvinyl Chloride), polycarbonate, and others.</li>
+        <li>Examples: Plastic e-waste includes casings of computers, monitors, TVs, keyboards, mice, printers, scanners, and various consumer electronics like mobile phones, tablets, and gaming consoles.</li>
+        <li>Recycling Challenges: Plastic e-waste presents challenges in recycling due to the diversity of plastic types, which may require different processing methods. Additionally, plastics may be contaminated with other materials, such as metals or hazardous substances, making separation and recycling more complex.</li>
+        <li>Recycling will be properly done adhering all rules and regulations.</li>
+        <li>Environmental Impact: Improper disposal of plastic e-waste contributes to environmental pollution, including land and water contamination, as plastics can take hundreds of years to degrade. Incineration of plastic e-waste can release toxic fumes and contribute to air pollution.</li>
+    </ul>
+
+    <p>Metal E-waste</p>
+    <ul>
+        <li>Composition: Various metals are present in electronic devices, including aluminum, copper, gold, silver, platinum, palladium, and others. Metals are used in circuitry, wiring, connectors, heat sinks, and other components due to their conductivity, durability, and heat dissipation properties.</li>
+        <li>Examples: Metal e-waste includes circuit boards, wiring, connectors, heatsinks, hard drives, power supplies, and other internal and external components of electronic devices.</li>
+        <li>Recycling Opportunities: Metals in e-waste are valuable resources that can be recovered through recycling processes. Recycling facilities use methods such as shredding, sorting, and smelting to extract metals from e-waste for reuse in manufacturing new products.</li>
+        <li>Environmental Benefits: Recycling metal e-waste reduces the need for virgin ore extraction, conserving natural resources and reducing energy consumption and greenhouse gas emissions associated with mining and refining processes. Additionally, proper recycling prevents the release of hazardous metals into the environment, mitigating potential health and environmental risks.</li>
+    </ul>
+</div>
+
+
+</body>
+</html>

@@ -17,11 +17,13 @@
         <label for="metal">Metal</label><br><br>
         <h2>Effect</h2>
         <div class="video-container">
-            <video controls width="400" height="200">
+            <video controls poster="{% static 'images/types.jpeg' %}" width="400px" height="200px">
                 <source src="{% static 'videos/Types.mp4' %}" type="video/mp4">
             </video>
         </div>
-        <button type="submit">Classified</button>
+        <div class="button-container">
+                <button type="submit">Classified</button>
+        </div>
         <a href="query.html" class="back-link">Having doubts?</a>
 
     </div>

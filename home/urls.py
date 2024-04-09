@@ -18,5 +18,6 @@ urlpatterns = [
     path('home/submit.html', views.submit, name='submit'),
     path('home/cart.html', views.cart, name='cart'),
     path('home/classify.html', views.classify, name='classify'),
+    path('home/query.html', views.query, name='query'),
 
 ]

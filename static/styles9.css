@@ -20,6 +20,13 @@ body {
             margin-top: 20px;
 }
 
+.button-container {
+            position: absolute; /* Position the button absolutely */
+            bottom: 0; /* Align the button to the bottom of the container */
+            left: 50%; /* Center the button horizontally */
+            transform: translateX(-50%); /* Center the button horizontally */
+        }
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
