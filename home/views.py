@@ -27,6 +27,9 @@ def causes(request):
 def effect(request):
     return render(request, 'effect.html')
 
+def order_track(request):
+    return render(request, 'order_track.html')
+
 def solutions(request):
     return render(request, 'solutions.html')
 

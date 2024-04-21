@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order</title>
+    <link rel="stylesheet" href="{% static 'styles10.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Track Order</h1>
+        <p>Track the status of your orders here:</p>
+        
+        <!-- Table to display order information -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Status</th>
+                    <th>Ordered Date</th>
+                </tr>
+            </thead>
+            <tbody id="order-info-body">
+                <!-- Data will be populated dynamically using JavaScript -->
+            </tbody>
+        </table>
+        
+        <a href="product_list.html" class="back-link">Back to Product List</a>
+    </div>
+
+    <script>
+        // Function to extract query parameter from URL
+        // Function to get the value of a specific query parameter from the URL
+// Function to populate order information table
+function populateOrderInfo() {
+    // Get the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+
+    // Get the product name from the URL query parameters
+    const productName = urlParams.get('product_name');
+
+    // Check if product name is not null or empty
+        // Dummy data for demonstration
+        const orders = [
+            { productName: "Electric Toy", status: "Ordered", orderedDate: getCurrentDate() },
+            // Add more order data as needed
+        ];
+
+        const tbody = document.getElementById('order-info-body');
+        orders.forEach(order => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${order.productName}</td>
+                <td>${order.status}</td>
+                <td>${order.orderedDate}</td>
+            `;
+            tbody.appendChild(row);
+        });
+}
+function getCurrentDate() {
+            const today = new Date();
+            const year = today.getFullYear();
+            let month = today.getMonth() + 1;
+            let day = today.getDate();
+
+            // Add leading zero if month/day is less than 10
+            month = month < 10 ? '0' + month : month;
+            day = day < 10 ? '0' + day : day;
+
+            return `${year}-${month}-${day}`;
+        }
+
+// Call the function to populate order information table
+populateOrderInfo();
+
+
+    </script>
+</body>
+</html>

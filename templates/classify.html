@@ -8,24 +8,49 @@
     <link rel="stylesheet" href="{% static 'styles9.css' %}">
 </head>
 <body>
-    <div class = "container">
-    <h1>E-Waste Classification</h1>
+    <div class="container">
+        <h1>E-Waste Classification</h1>
         <h3>Select the material of the e-waste:</h3>
-        <input type="radio" id="plastic" name="classification" value="plastic">
+        <input type="radio" id="plastic" name="classification" value="Plastic">
         <label for="plastic">Plastic</label><br>
-        <input type="radio" id="metal" name="classification" value="metal">
+        <input type="radio" id="metal" name="classification" value="Metal">
         <label for="metal">Metal</label><br><br>
-        <h2>Effect</h2>
+        <h2>Classification</h2>
         <div class="video-container">
             <video controls poster="{% static 'images/types.jpeg' %}" width="400px" height="200px">
                 <source src="{% static 'videos/Types.mp4' %}" type="video/mp4">
             </video>
         </div>
-        <div class="button-container">
-                <button type="submit">Classified</button>
+        
+        <div class="button-row">
+            <button type="button" onclick="classify()">Classified</button>
+            <button id="continue-btn" type="button" onclick="continueOrder()" style="display: none;">Continue Ordering</button>
         </div>
+        <div id="selected-material"></div> <!-- This div will show the selected material -->
         <a href="query.html" class="back-link">Having doubts?</a>
-
     </div>
+
+    <script>
+        function classify() {
+            var selectedMaterial = document.querySelector('input[name="classification"]:checked');
+            if (selectedMaterial) {
+                var materialValue = selectedMaterial.value;
+                var selectedMaterialDiv = document.getElementById("selected-material");
+                selectedMaterialDiv.innerHTML = "Selected Material: " + materialValue;
+                selectedMaterialDiv.style.display = "block"; // Show the selected material
+                
+                // Show the "Continue Ordering" button
+                var continueBtn = document.getElementById("continue-btn");
+                continueBtn.style.display = "inline-block";
+            } else {
+                alert("Please select a material.");
+            }
+        }
+
+        function continueOrder() {
+            // Redirect to the order page
+            window.location.href = "{% url 'order' %}";
+        }
+    </script>
 </body>
 </html>

@@ -7,25 +7,46 @@ body {
 
 .container {
     max-width: 600px;
-    height: 600px;
+    height: 800px; /* Adjust the height as needed */
     margin: 50px auto;
-    padding: 20px;
+    
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding-top: -10px;
+    max-height: 1000px;
+    
 }
 .back-link {
             display: block;
-            margin-top: 20px;
+            margin-top: 10px;
+}
+
+.selected-material {
+    font-weight: bold; /* Example style for the selected material */
+    color: #ff5733; /* Example color for the selected material */
 }
 
 .button-container {
-            position: absolute; /* Position the button absolutely */
-            bottom: 0; /* Align the button to the bottom of the container */
-            left: 50%; /* Center the button horizontally */
-            transform: translateX(-50%); /* Center the button horizontally */
-        }
+    display: none; /* Hide initially */
+    margin-top: 10px; /* Adjust margin as needed */
+    text-align: center; /* Center the button horizontally */
+}
+
+#continue-ordering-btn {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#continue-ordering-btn:hover {
+    background-color: #218838; /* Darker green color on hover */
+}
+
 
 h1 {
     text-align: center;
@@ -39,20 +60,16 @@ form {
 input[type="radio"] {
     margin-right: 10px;
 }
-
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.button-row {
+    display: inline-block;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.button-row button {
+    margin-right: 10px;
 }
+
+
 .video-container {
     display: inline-block;
     margin: 0 10px;

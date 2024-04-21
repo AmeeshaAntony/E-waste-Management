@@ -19,5 +19,7 @@ urlpatterns = [
     path('home/cart.html', views.cart, name='cart'),
     path('home/classify.html', views.classify, name='classify'),
     path('home/query.html', views.query, name='query'),
+    path('home/about.html', views.about, name='about'),
+    path('home/order_track.html', views.order_track, name='order_track'),
 
 ]
