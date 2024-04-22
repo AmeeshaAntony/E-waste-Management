@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation</title>
+</head>
+<body>
+  <h1>Order Confirmation</h1>
+  <p>You have selected the following product:</p>
+  <p id="confirmed-product-name"></p>
+  <p>Click "Continue" to proceed to order tracking.</p>
+  <a href="order_track.html">Continue</a>
+
+  <script>
+    const confirmedProductNameElement = document.getElementById('confirmed-product-name');
+    const selectedProductName = document.querySelector('input[name="product_name"]').value;
+    confirmedProductNameElement.textContent = selectedProductName;
+  </script>
+</body>
+</html>

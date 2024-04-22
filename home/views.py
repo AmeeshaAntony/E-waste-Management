@@ -87,3 +87,6 @@ def process_classification(request):
             return HttpResponse('Invalid classification.')
     else:
         return HttpResponse('Method not allowed.')
+
+def contact(request):
+    return render(request, 'contact.html')
