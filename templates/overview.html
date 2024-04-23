@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overview</title>
+    <link rel="stylesheet" href="{% static 'styles12.css' %}">
+</head>
+<body>
+    <div class="containera">
+        <h1>Overview - Reports</h1>        
+    </div>
+    <div class="containerb">
+    <div class="parallel-containers">
+            <div class="container2">
+                <img src="{% static 'images/global.jfif' %}" style="width: 200px; height: 200px;">
+            </div>
+            <div class="container2">
+                <img src="{% static 'images/stat2.png' %}"  style="width: 200px; height: 200px;">
+            </div>
+            <div class="container2">
+                <img src="{% static 'images/stat3.png' %}" style="width: 200px; height: 200px;">
+            </div>
+     </div>
+     <div class="parallel-containers">
+            <div class="container3">
+                <p>The global E-waste Monitor 2024</p>
+            </div>
+            <div class="container3">
+               <p>Regional E-waste Monitors</p>
+            </div>
+            <div class="container3">
+                <p>Future ewaste @2050</p>
+            </div>
+     </div>
+     <div class="parallel-containers">
+            <div class="container4">
+                <a href="global.html" class="button">Read More</a>
+            </div>
+            <div class="container4">
+               <a href="regional.html" class="button">Read More</a>
+            </div>
+            <div class="container4">
+                <a href="future.html" class="button">Read More</a>
+            </div>
+     </div>
+ </div>
+
+
+</body>
+</html>

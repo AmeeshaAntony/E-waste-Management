@@ -15,6 +15,7 @@ urlpatterns = [
     path('login/order_track.html', views.order_track, name='order_track'),
     path('login/order.html', views.order, name='order'),
     path('login/contact.html', views.contact, name='contact'),
+    path('login/overview.html', views.overview, name='overview'), 
     path('home/product_list.html', views.product, name='product'),
     path('home/help.html', views.help, name='help'),
     path('home/product_details.html', views.product_detail, name='product_detail'),

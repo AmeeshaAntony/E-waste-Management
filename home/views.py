@@ -90,3 +90,6 @@ def process_classification(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def overview(request):
+    return render(request, 'overview.html')

@@ -1,0 +1,80 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The global E-waste Monitor 2024</title>
+    <link rel="stylesheet" href="{% static 'styles6.css' %}">
+    <style>
+        /* Style for the main heading */
+        h1 {
+            text-align: center;
+            color: whitesmoke;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the paragraph */
+        p {
+            text-align: justify;
+            color: whitesmoke;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the list */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Style for list items */
+        li {
+            color: whitesmoke;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 700px; /* Adjust the maximum width as needed */
+            margin: 10px auto; /* Center the container horizontally */
+            padding: 20px; /* Add some padding around the container */
+            background-color: black; /* Background color for the container */
+            border-radius: 20px; /* Add rounded corners to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the container */
+            display: flex; /* Use Flexbox */
+            flex-direction: column; /* Stack flex items vertically */
+            justify-content: start; /* Center the container vertically */
+            height: 90vh; /* Set container height to 100% of viewport height */
+            margin-top: 0;/* Set container height to 100% of viewport height */
+        }
+        body{
+            padding: 20px;
+            background-image: url('{% static "images/causebg.jpeg" %}'); /* Add background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Arial, sans-serif; /* Specify a fallback font */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Causes of E-Waste</h1>
+    <p>E-waste is generated due to various reasons. Here are some common causes:</p>
+    <ul>
+        <li>The world’s generation of electronic waste is rising five times faster than documented e-waste recycling, the UN’s fourth Global E-waste Monitor (GEM) reveals today.</li>
+        <li>A record 62 million tonnes (Mt) of e-waste was produced in 2022, Up 82% from 2010; On track to rise another 32%, to 82 million tonnes, in 2030; Billions of dollars worth of strategically-valuable resources squandered, dumped; Just 1% of rare earth element demand is met by e-waste recycling.
+		</li>
+        <li>The 62 million tonnes of e-waste generated in 2022 would fill 1.55 million 40-tonne trucks, roughly enough trucks to form a bumper-to-bumper line encircling the equator, according to the report from ITU and UNITAR.</li>
+        <li>Meanwhile, less than one quarter (22.3%) of the year’s e-waste mass was documented as having been properly collected and recycled in 2022, leaving US$ 62 billion worth of recoverable natural resources unaccounted for and increasing pollution risks to communities worldwide.</li>
+        <li>Worldwide, the annual generation of e-waste is rising by 2.6 million tonnes annually, on track to reach 82 million tonnes by 2030, a further 33% increase from the 2022 figure.</li>
+    </ul>
+</div>
+
+
+</body>
+</html>

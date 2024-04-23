@@ -1,0 +1,101 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set box-sizing to border-box for all elements */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+/* Container styles */
+.containera {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+.containerb {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 80px;
+    text-align: center;
+}
+.parallel-containers {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.container2 {
+    text-align: center;
+    margin: 0 10px;
+    border: 5px solid seagreen; 
+    padding: 10px; 
+    border-radius: 8px;
+    flex: 2;
+}
+.container3,.container4{
+    text-align: center;
+    margin-top: 10px;
+    flex: 2;
+    font-size: 14px; /*
+}
+/* Heading styles */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    max-width: 50%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styles */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Back link styles */
+.back-link {
+    display: block;
+    margin-top: 20px;
+}
