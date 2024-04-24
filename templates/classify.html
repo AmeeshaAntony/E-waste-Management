@@ -10,6 +10,7 @@
 <body>
     <div class="container">
         <h1>E-Waste Classification</h1>
+        <div class="container1">
         <h3>Select the material of the e-waste:</h3>
         <input type="radio" id="plastic" name="classification" value="Plastic">
         <label for="plastic">Plastic</label><br>
@@ -26,8 +27,9 @@
             <button type="button" onclick="classify()">Classified</button>
             <button id="continue-btn" type="button" onclick="continueOrder()" style="display: none;">Continue Ordering</button>
         </div>
-        <div id="selected-material"></div> <!-- This div will show the selected material -->
+        <div id="selected-material"></div> 
         <a href="query.html" class="back-link">Having doubts?</a>
+    </div>
     </div>
 
     <script>

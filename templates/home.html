@@ -6,31 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="{% static 'styles3.css' %}">
+
     <style>
-        .container {
-            margin-bottom: 20px; /* Add margin below container */
+        .container3 {
+            margin-top: 2px; /* Add margin below container */
+            flex:2;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column; /* Align child elements vertically */
+            align-items: center; /* Align child elements horizontally */
+            text-align: center; /* Align text within the container */
+        }
+        .container4 {
+            
+            flex:2;
+            margin-left: 10px;
         }
         p {
             margin-top: 20px; /* Add margin above paragraph */
+            color: white;
         }
+        body{
+            background-color: black;
+        }
+        .parallel-containers {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+        }
+        .container5{
+            margin-top:20px;
+        }
+        img{
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        
     </style>
 </head>
 <body>
     <div class ="container">
-        <h1>Home</h1>
-        {% if username %}
-            <h1>Hello, {{ username }}!</h1>
-        {% else %}
-            <h1>Hello, Guest!</h1>
-        {% endif %}
+        <h1>Welcome to E-waste Management</h1>
     </div>
     <a href="overview.html" class="overview-button">Overview</a>
     <a href="about.html" class="about-button">About</a>
     <a href="product_list.html" class="product-button">Products</a>
     <a href="order.html" class="order-button">Order</a>
     <a href="contact.html" class="help-button">Help</a>
-    <div class="container">
-        <p>This is a paragraph below the buttons.</p>
+     <div class="container5">
+            <h2 style="margin-left: 15px; text-decoration: underline;margin-top: 100px;padding-left: 200px; color:white;">Know on E-waste</h2>
     </div>
+    <div class="parallel-containers">
+            <div class="container3">
+               
+                <p>E-waste, or electronic waste, refers to discarded electrical or electronic devices. With the rapid advancement of technology, the accumulation of e-waste has become a pressing global issue. These discarded devices contain hazardous materials such as lead, mercury, and cadmium, posing significant environmental and health risks if not properly managed. E-waste recycling is essential to mitigate these risks and recover valuable resources like precious metals and plastics. However, inadequate recycling infrastructure and improper disposal methods contribute to environmental pollution and health hazards in many regions. Addressing e-waste management requires effective regulation, public awareness, and sustainable recycling practices to minimize its adverse impacts on ecosystems and human health.E-waste encompasses a wide range of electronic products, including old computers, mobile phones, TVs, and kitchen appliances, among others. The improper disposal of these devices leads to environmental degradation, soil and water pollution, and health hazards for workers involved in informal recycling activities. Moreover, the rapid pace of technological innovation and short product lifespans contribute to the ever-growing e-waste problem worldwide. Efforts to address this issue involve implementing extended producer responsibility (EPR) schemes, promoting eco-design principles for electronics, and fostering a circular economy approach to reduce waste generation and promote resource efficiency. Collaboration between governments, industries, and consumers is crucial to developing sustainable solutions for managing e-waste and minimizing its negative impacts on the planet.
+</p>
+            </div>
+            <div class="container4">
+               <img src="{% static 'images/ewaste1.jpg' %}" alt="Icon" style="width: 400px; height: 300px;margin-top: 10px;margin-left:90px;">
+            </div>
+    </div>
+
 </body>
 </html>
