@@ -25,6 +25,8 @@ urlpatterns = [
     path('home/classify.html', views.classify, name='classify'),
     path('login/classify', views.classify, name='classify'),
     path('home/query.html', views.query, name='query'),
+    path('home/price.html', views.price, name='price'),
+    path('home/doubts.html', views.doubts, name='doubts'),
     path('home/about.html', views.about, name='about'),
     path('home/order_track.html', views.order_track, name='order_track'),
 

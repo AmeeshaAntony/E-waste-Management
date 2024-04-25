@@ -93,3 +93,9 @@ def contact(request):
 
 def overview(request):
     return render(request, 'overview.html')
+
+def price(request):
+    return render(request, 'price.html')
+
+def doubts(request):
+    return render(request, 'doubts.html')

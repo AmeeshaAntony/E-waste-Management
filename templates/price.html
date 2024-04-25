@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Confirmation</title>
+    <link rel="stylesheet" href="{% static 'styles13.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Price Confirmation</h1>
+        <p>Please select how much of the product you want to recycle:</p>
+        
+        <form id="orderForm" action="#" method="POST"> <!-- Change the action to "#" -->
+            {% csrf_token %}
+            <label for="recycle">Recycle Amount:</label>
+            <select id="recycle" name="recycle">
+                <option value="None">None</option>
+                <option value="25%">25%</option>
+                <option value="50%">50%</option>
+                <option value="75%">75%</option>
+                <option value="100%">100%</option>
+            </select>
+            <br>
+            
+            <p>Please select the part you want to replace:</p>
+            
+            <label for="part">Select Part:</label>
+            <select id="part" name="part">
+                <option value="LCD Screen">LCD Screen</option>
+                <option value="Battery">Battery</option>
+                <option value="Motherboard">Motherboard</option>
+                <!-- Add more options as needed -->
+            </select>
+            <br>
+
+            <label for="ewasteClass">Level of degradability</label>
+            <select id="ewasteClass" name="ewasteClass">
+                <option value="Light">Light</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="Completely">Completely</option>
+            </select>
+            
+            <br>
+            <label for="usage">Time of usage</label>
+            <select id="usage" name="usage">
+                <option value="Very new">Very new</option>
+                <option value="New">New</option>
+                <option value="1 year">1year</option>
+                <option value="Less than 3 years"><3 years</option>
+                <option value="Less than 5 years"><5 years</option>
+                <option value="More than 3 years">>5 years</option>
+            </select>
+            
+            <br>
+            <label for="status">Purpose of order</label>
+            <select id="status" name="status">
+                <option value="Buy">Buy</option>
+                <option value="Sell">Sell</option>
+            </select>
+            
+            <br>            
+            <label for="priceRange">Price Range:</label>
+            <input type="text" id="priceRange" name="priceRange">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+        
+        <div id="selectedQuantities">
+            <!-- Placeholder for displaying selected quantities -->
+        </div>
+        <input type="submit" id="confirmButton" value="Confirm" style="display: none;">
+        <a href="product_list.html" class="back-link">Back to Product List</a>
+    </div>
+    
+    <script>
+        document.getElementById('orderForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get selected values
+            var recycleAmount = document.getElementById('recycle').value;
+            var partToReplace = document.getElementById('part').value;
+            var ewasteClass = document.getElementById('ewasteClass').value;
+            var usage = document.getElementById('usage').value;
+            var status = document.getElementById('status').value;
+            var priceRange = document.getElementById('priceRange').value;
+
+            // Create message to display
+            var message = "<p>Recycle Amount: " + recycleAmount + "</p>";
+            message += "<p>Part to Replace: " + partToReplace + "</p>";
+            message += "<p>Level of degradability: " + ewasteClass + "</p>";
+            message += "<p>Usage: " + usage + "</p>";
+            message += "<p>status: " + status+ "</p>";
+            message += "<p>Price Range: " + priceRange + "</p>";
+            // Display selected quantities
+            document.getElementById('selectedQuantities').innerHTML = message;
+            
+            // Show the confirm button
+            document.getElementById('confirmButton').style.display = 'inline-block';
+            
+            // Check the status and redirect accordingly
+            if (status === 'Buy') {
+                document.getElementById('confirmButton').addEventListener('click', function() {
+                    window.location.href = 'payment.html'; // Redirect to payment.html
+                });
+            } else {
+                document.getElementById('confirmButton').addEventListener('click', function() {
+                    window.location.href = 'confirmation.html'; // Redirect to page1.html
+                });
+            }
+        });
+    </script>
+</body>
+</html>

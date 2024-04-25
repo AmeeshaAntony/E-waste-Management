@@ -1,0 +1,49 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* e-Waste container styles */
+.ewaste-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* e-Waste heading styles */
+.ewaste-container h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* e-Waste description styles */
+.ewaste-container p {
+    color: #666;
+}

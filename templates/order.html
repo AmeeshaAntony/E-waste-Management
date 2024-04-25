@@ -12,8 +12,8 @@
     <h1>Order Page</h1>
     <p>This is the order page. You can add your order form or any other content related to placing an order here.</p>
     <!-- Example order form -->
-    <form action="submit.html" method="POST">
-        {% csrf_token %}
+    <form action="price.html" method="POST">
+    {% csrf_token %}
         <label for="quantity">Quantity:</label>
         <input type="number" id="quantity" name="quantity" value="1" min="1">
         <br>
