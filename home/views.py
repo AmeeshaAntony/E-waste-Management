@@ -91,6 +91,19 @@ def process_classification(request):
 def contact(request):
     return render(request, 'contact.html')
 
+def global1(request):
+    return render(request, 'global.html')
+
+def regional(request):
+    return render(request, 'regional.html')
+
+def future(request):
+    return render(request, 'future.html')
+
+
+def query(request):
+    return render(request, 'query.html')
+
 def overview(request):
     return render(request, 'overview.html')
 
@@ -99,3 +112,6 @@ def price(request):
 
 def doubts(request):
     return render(request, 'doubts.html')
+
+def payment(request):
+    return render(request, 'payment.html')

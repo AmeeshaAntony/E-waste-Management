@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="{% static 'styles15.css' %}">
+    <style>
+        /* styles_payment.css */
+
+/* Style the input elements to add space between each option */
+input[type="radio"],
+input[type="text"],
+input[type="password"] {
+    margin-bottom: 10px; /* Add margin below each input element */
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Options</h1>
+        
+        <form id="paymentForm" action="#" method="POST">
+            {% csrf_token %}
+            <input type="radio" id="creditCard" name="paymentMethod" value="Credit Card">
+            <label for="creditCard">Credit Card</label><br>
+            
+            <input type="radio" id="debitCard" name="paymentMethod" value="Debit Card">
+            <label for="debitCard">Debit Card</label><br>
+            
+            <input type="radio" id="paypal" name="paymentMethod" value="PayPal">
+            <label for="paypal">PayPal</label><br>
+
+            <input type="radio" id="creditCard" name="paymentMethod" value="Cash on Delivery">
+            <label for="creditCard">Cash on Delivery</label><br>
+            
+            <input type="radio" id="googlePay" name="paymentMethod" value="Google Pay">
+            <label for="googlePay">Google Pay</label><br>
+            <div id="googlePayUPI" style="display: none;">
+                <label for="googlePayUPIID">Google Pay UPI ID:</label>
+                <input type="text" id="googlePayUPIID" name="googlePayUPIID">
+            </div>
+            
+            <input type="radio" id="phonePe" name="paymentMethod" value="PhonePe">
+            <label for="phonePe">PhonePe</label><br>
+            <div id="phonePeUPI" style="display: none;">
+                <label for="phonePeUPIID">PhonePe UPI ID:</label>
+                <input type="text" id="phonePeUPIID" name="phonePeUPIID">
+            </div>
+            
+            <div id="cardNumberContainer" style="display: none;">
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber">
+                <br>
+                <label for="pinNumber">PIN Number:</label>
+                <input type="password" id="pinNumber" name="pinNumber">
+            </div>
+
+            
+            <input type="submit" value="Confirm Payment">
+        </form>
+    </div>
+
+    <script>
+        // JavaScript code to toggle the visibility of the card number input field and UPI ID input fields
+        document.querySelectorAll('input[name="paymentMethod"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                if (this.value === 'Credit Card' || this.value === 'Debit Card') {
+                    document.getElementById('cardNumberContainer').style.display = 'block';
+                    document.getElementById('googlePayUPI').style.display = 'none';
+                    document.getElementById('phonePeUPI').style.display = 'none';
+                } else if (this.value === 'Google Pay') {
+                    document.getElementById('googlePayUPI').style.display = 'block';
+                    document.getElementById('phonePeUPI').style.display = 'none';
+                    document.getElementById('cardNumberContainer').style.display = 'none';
+                } else if (this.value === 'PhonePe') {
+                    document.getElementById('phonePeUPI').style.display = 'block';
+                    document.getElementById('googlePayUPI').style.display = 'none';
+                    document.getElementById('cardNumberContainer').style.display = 'none';
+                } else {
+                    document.getElementById('googlePayUPI').style.display = 'none';
+                    document.getElementById('phonePeUPI').style.display = 'none';
+                    document.getElementById('cardNumberContainer').style.display = 'none';
+                }
+            });
+        });
+
+        // JavaScript code to handle form submission
+        document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            
+            if (paymentMethod === 'Google Pay' || paymentMethod === 'PhonePe') {
+                alert('Please proceed to your ' + paymentMethod + ' app to complete the payment.');
+                window.location.href = 'submit.html';
+            } else if (paymentMethod === 'Credit Card' || paymentMethod === 'Debit Card') {
+                var cardNumber = document.getElementById('cardNumber').value;
+                var pinNumber = document.getElementById('pinNumber').value;
+
+                // Check if card number and PIN number are numeric
+                if (!isNumeric(cardNumber) || !isNumeric(pinNumber) || cardNumber.length !== 12 || pinNumber.length !== 4) {
+                    alert('Card number must contain 12 numeric characters and PIN number must contain 4 numeric characters.');
+                    return;
+                }
+                alert('Payment done using ' + paymentMethod + '.');
+                window.location.href = 'submit.html';
+            } else {
+                // Redirect to the final page for other payment methods
+                window.location.href = 'submit.html';
+            }
+        });
+
+        // Function to check if a value is numeric
+        function isNumeric(value) {
+            return /^\d+$/.test(value);
+        }
+    </script>
+</body>
+</html>

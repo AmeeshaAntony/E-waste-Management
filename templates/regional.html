@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regional E-waste Monitor</title>
+    <style>
+        /* Style for the main heading */
+        h1 {
+            text-align: center;
+            color: whitesmoke;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the paragraph */
+        p {
+            text-align: justify;
+            color: whitesmoke;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the list */
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        /* Style for list items */
+        li {
+            color: whitesmoke;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .container {
+            max-width: 700px; /* Adjust the maximum width as needed */
+            margin: 10px auto; /* Center the container horizontally */
+
+            padding: 20px; /* Add some padding around the container */
+            background-color: black; /* Background color for the container */
+            border-radius: 20px; /* Add rounded corners to the container */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect to the container */
+            display: flex; /* Use Flexbox */
+            flex-direction: column; /* Stack flex items vertically */
+            justify-content: start; /* Center the container vertically */
+            height: 90vh; /* Set container height to 100% of viewport height */
+        }
+        body{
+            padding: 20px;
+            background-image: url('{% static "images/effectbg.jpg" %}'); /* Add background image */
+            background-size: cover; /* Cover the entire body */
+            background-position: center; /* Center the background image */
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            font-family: Arial, sans-serif; /* Specify a fallback font */
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Regional E-waste Monitor for the Western Balkans</h1>
+    <ul>
+        <li>E-Waste landscape in Western Balkans: progress, obstacles, and recommendations for a more sustainable sector.</li>
+        <li>In the Western Balkan nations—comprising Albania, Bosnia and Herzegovina, Montenegro, North Macedonia, and Serbia—an upswing in e-waste is underway, echoing global trends.</li>
+        <li>Drivers of this increase include technological innovations, short product lifespans, and a growing middle class. The Regional E-waste Monitor for the Western Balkans, a collaborative effort involving ITU, UNEP, and UNITAR, compiles regional and national e-waste statistics that are internationally comparable.</li>
+        <li>Offering factual insights, the report meticulously analyzes statistics, key stakeholders, existing policies and legislation, available infrastructure and technological practices.</li>
+        <li>The Electrical and Electronic Equipment (EEE) Placed on Market (POM) in the region increased from 0.16 Mt in 2010 to 0.21 Mt in 2021, while the e-waste generated observed a 67% increased and nearly doubled from 0.09 Mt to 0.15 Mt during the same period. Large Equipment (Category IVa) and Small Equipment (Category V) constitute the majority of both EEE POM and e-waste generated.</li>
+        <li>Despite specific legislation and Extended Producer Responsibility (EPR) schemes, challenges persist, with only two countries currently having functioning EPR schemes.</li>
+        <li>The region also faces hurdles such as a lack of reliable data and reporting systems, hindering proper enforcement and monitoring, and a limited collection and recycling infrastructure.</li>
+        <li>The region collected and managed 38.4 kt of e-waste in 2021, achieving a total collection rate of 27%.</li>
+    </ul>
+</div>
+
+</body>
+</html>

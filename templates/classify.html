@@ -6,6 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Waste Classification</title>
     <link rel="stylesheet" href="{% static 'styles9.css' %}">
+    <style>
+        .container input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Align the "Having doubts?" link to the left */
+.back-link {
+    display: block;
+    margin-top: 10px;
+}
+/* styles9.css */
+
+/* Center the container within the body using flexbox */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Adjusted to align items at the top */
+    height: 100vh;  /* Make sure the body covers the entire viewport height */
+    background-color: black;
+}
+
+.container {
+   margin-top: 70px;
+    background-color: white;
+    padding-top: 20px;
+}
+.container {
+    text-align: left; /* Align the contents to the left */
+    width: 30%; /* Adjust the width of the container as needed */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 5px;
+
+}
+#selected-material {
+    margin-top: 20px; /* Adjust the margin-top value to add space */
+    text-decoration: !important;
+}
+/* Style the buttons */
+.container button {
+    padding: 10px 20px; /* Add padding around the button text */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+}
+
+.container button:hover {
+    background-color: #45a049; /* Darker green background on hover */
+}
+</style>
 </head>
 <body>
     <div class="container">
