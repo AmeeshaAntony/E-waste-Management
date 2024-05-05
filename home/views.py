@@ -27,6 +27,9 @@ def causes(request):
 def effect(request):
     return render(request, 'effect.html')
 
+def login(request):
+    return render(request, 'login.html')
+
 def order_track(request):
     return render(request, 'order_track.html')
 
@@ -37,7 +40,7 @@ def product(request):
     return render(request, 'product_list.html')
 
 def help(request):
-    return render(request, 'help.html')
+    return render(request, 'contact.html')
 
 def product_detail(request):
     return render(request, 'product_detail.html')
